@@ -68,7 +68,7 @@ class BuildPlugin : Plugin<Project> {
         repositories {
             maven {
                 name = "OSSRH"
-                url = "https://maven.pkg.github.com/Mystery00/compose-fluent-ui"
+                url = target.uri("https://maven.pkg.github.com/Mystery00/compose-fluent-ui")
                 credentials {
                     username = System.getenv("OSSRH_USERNAME")
                     password = System.getenv("OSSRH_PASSWORD")
