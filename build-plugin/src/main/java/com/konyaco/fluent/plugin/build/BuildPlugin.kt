@@ -67,13 +67,8 @@ class BuildPlugin : Plugin<Project> {
         }
         repositories {
             maven {
-                val releasesUrl ="https://s01.oss.sonatype.org/content/repositories/snapshots/"
-                val snapshotsUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
                 name = "OSSRH"
-                url = target.uri(
-                    if (target.version.toString().endsWith("SNAPSHOT")) releasesUrl
-                    else snapshotsUrl
-                )
+                url = "https://maven.pkg.github.com/Mystery00/compose-fluent-ui"
                 credentials {
                     username = System.getenv("OSSRH_USERNAME")
                     password = System.getenv("OSSRH_PASSWORD")
